@@ -23,7 +23,8 @@ N_DENSE           = [5, 10, 20, 30, 50, 75, 100, 150, 200, 300, 500, 750, 1000]
 N_DENSE_EVEN      = [n for n in N_DENSE if n % 2 == 0]  # Richardson requires even N
 N_MODEL_RISK_SCAN = [50, 75, 100, 150, 200, 300, 500, 750, 1000, 1500, 2000, 3000, 5000]
 
-DIR = os.path.dirname(os.path.abspath(__file__))
+DIR       = os.path.dirname(os.path.abspath(__file__))
+GRAPH_DIR = os.path.join(DIR, "..", "graphs")
 SEP = "=" * 65
 
 
@@ -96,7 +97,7 @@ def main():
     # Comparison plot CRR vs JR vs Richardson
     plot_convergence_comparison(
         {"CRR": crr_results, "JR": jr_results, "Richardson": ric_results},
-        save_path=os.path.join(DIR, "convergence_comparison.png")
+        save_path=os.path.join(GRAPH_DIR, "convergence_comparison.png")
     )
 
     # Convergence slopes
@@ -146,7 +147,7 @@ def main():
         N_EU_SCAN,
         {"CRR": crr_errs_pct, "JR": jr_errs_pct},
         threshold=0.05,
-        save_path=os.path.join(DIR, "eu_threshold_scan.png")
+        save_path=os.path.join(GRAPH_DIR, "eu_threshold_scan.png")
     )
 
     # 3b. American: CRR at N=500 vs high-N reference (N=5000, threshold 0.05%)
@@ -193,7 +194,7 @@ def main():
     plot_crr_jr_model_risk_prices(
         N_MODEL_RISK_SCAN, crr_mr_prices, jr_mr_prices,
         threshold_n=stable_n, threshold=discrepancy_threshold,
-        save_path=os.path.join(DIR, "crr_jr_model_risk_prices.png")
+        save_path=os.path.join(GRAPH_DIR, "crr_jr_model_risk_prices.png")
     )
 
     print(f"\n{SEP}\n  Done.\n{SEP}\n")

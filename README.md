@@ -9,11 +9,17 @@ A from-scratch Python implementation of binomial tree option pricers (CRR and Ja
 ## Repository Structure
 
 ```
-├── crr_engine.py          # Core pricing engine
-├── convergence_plot.py    # Visualization module
-├── main.py                # Entry point — runs all four parts
-├── QFM_Paper.pdf          # Reference paper (D1)
-└── output figures/        # Generated at runtime (PNG, 300 DPI)
+├── codes/
+│   ├── crr_engine.py          # Core pricing engine
+│   ├── convergence_plot.py    # Visualization module
+│   └── main.py                # Entry point — runs all four parts
+├── graphs/                    # Output figures (PNG, 300 DPI)
+│   ├── convergence_comparison.png
+│   ├── eu_threshold_scan.png
+│   └── crr_jr_model_risk_prices.png
+└── reference paper/
+    ├── QFM_Paper.pdf          # Reference paper (D1)
+    └── The_CRR_Binomial_Option_Pricing_Model_An.pdf
 ```
 
 ---
@@ -102,7 +108,8 @@ pip install numpy scipy matplotlib
 ## Usage
 
 ```bash
+cd codes
 python main.py
 ```
 
-Generates four PNG figures in the project directory and prints all numerical results to stdout.
+Generates three PNG figures in `graphs/` and prints all numerical results to stdout.
