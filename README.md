@@ -18,8 +18,7 @@ A from-scratch Python implementation of binomial tree option pricers (CRR and Ja
 │   ├── eu_threshold_scan.png
 │   └── crr_jr_model_risk_prices.png
 └── reference paper/
-    ├── QFM_Paper.pdf          # Reference paper (D1)
-    └── The_CRR_Binomial_Option_Pricing_Model_An.pdf
+    └── QFM_Paper.pdf          # Reference paper (D1)
 ```
 
 ---
