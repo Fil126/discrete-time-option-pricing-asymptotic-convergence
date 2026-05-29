@@ -155,14 +155,14 @@ def plot_crr_jr_model_risk_prices(N_values, crr_prices, jr_prices,
                 marker="s", markersize=4, label="JR price")
 
     if threshold_n is not None:
-        ax.axvline(threshold_n, color=GREY, linewidth=1.3,
+        ax.axvline(threshold_n, color="#404040", linewidth=1.3,
                    linestyle="--", label=f"Stable discrepancy < {threshold}%")
         ax.annotate(
             f"N={threshold_n}",
             xy=(threshold_n, np.interp(threshold_n, N, crr_prices)),
-            xytext=(threshold_n * 1.08, max(crr_prices.max(), jr_prices.max())),
-            fontsize=9, color=GREY,
-            arrowprops=dict(arrowstyle="->", color=GREY, lw=0.8)
+            xytext=(threshold_n * 1.08, max(crr_prices.max(), jr_prices.max()) - 0.012),
+            fontsize=9, color="#404040",
+            arrowprops=dict(arrowstyle="->", color="#404040", lw=0.8)
         )
 
     ax.set_xlabel("Number of Time Steps $N$", fontsize=11)
