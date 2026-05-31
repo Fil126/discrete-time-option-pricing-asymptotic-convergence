@@ -1,10 +1,10 @@
-# Binomial Option Pricing — QFM2026 Deliverable 2
+# Discrete-Time Option Pricing & Asymptotic Convergence
 
 **Team 4 · Quantitative Financial Modelling 2026 · Project 3**
 
 A from-scratch Python implementation of binomial tree option pricers (CRR and Jarrow-Rudd), with convergence analysis, production benchmarking, and model-risk assessment against the Black-Scholes-Merton closed form.
 
-**Interactive Animation:** [CRR vs JR vs Richardson — Convergence to BSM](https://fil126.github.io/qfm2026-binomial-pricer/graphs/convergence_comparison.html)
+**Interactive Animation:** [CRR vs JR vs Richardson — Convergence to BSM](https://fil126.github.io/discrete-time-option-pricing-asymptotic-convergence/graphs/convergence_comparison.html)
 
 ---
 
