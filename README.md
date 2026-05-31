@@ -105,7 +105,7 @@ plotly
 
 Install with:
 ```bash
-pip install numpy scipy matplotlib
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -115,4 +115,4 @@ cd codes
 python main.py
 ```
 
-Generates three PNG figures in `graphs/` and prints all numerical results to stdout.
+Generates three PNG figures and one interactive HTML in `graphs/`, and prints all numerical results to stdout.
